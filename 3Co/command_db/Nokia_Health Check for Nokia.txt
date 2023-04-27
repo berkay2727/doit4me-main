@@ -1,0 +1,71 @@
+environment time-stamp
+admin display-config
+show bof
+show card detail
+show card state
+show chassis
+show chassis detail
+show lag
+show lag detail
+show log log-id 100
+show log log-id 99
+show mda detail
+show port
+show port description
+show redundancy synchronization
+show router bgp neighbor
+show router bgp summary
+show router bgp summary all
+show router igmp group
+show router igmp interface
+show router igmp statistics
+show router interface
+show router interface detail
+show router isis adjacency
+show router isis adjacency detail
+show router isis interface
+show router isis interface detail
+show router isis status
+show router ldp discovery
+show router ldp discovery adjacency-type link
+show router ldp interface
+show router ldp targ-peer
+show router ldp session
+show router ldp session | match Nonexistent
+show router ldp status
+show router mpls bypass-tunnel
+show router mpls interface
+show router mpls lsp
+show router mpls lsp count
+show router mpls lsp path
+show router mpls lsp terminate
+show router mpls lsp transit
+show router mpls path
+show router mpls status
+show router pim group
+show router pim interface
+show router pim neighbor
+show router pim status
+show router route-table
+show router route-table summary
+show router rsvp interface
+show router rsvp interface detail
+show router rsvp neighbor
+show router rsvp neighbor detail
+show router rsvp session
+show router rsvp status
+show router status
+show service sap-using
+show service sdp
+show service sdp-using
+show service service-using
+show system alarms
+show system cpu
+show system info
+show system memory-pools
+show system ntp all
+show system security cpm-filter ip-filter
+show system switch-fabric
+show system sync-if-timing
+show version 
+admin tech-support cf1:/tech-support/hypercare_activities_23062022_hhmm.bin

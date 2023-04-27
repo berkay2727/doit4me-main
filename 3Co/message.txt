@@ -1,0 +1,5 @@
+<p>Dear ${PERSON_NAME},</p>
+<p>You can find the compared commands and their resuls under the command. If the result is empty, the compared output doesn&apos;t have a significant change.</p>
+<p>${OUTPUT_MESSAGE}</p>
+<p><em>Best Regards,</em></p>
+<p><strong><em>3Co Team</em></strong></p>

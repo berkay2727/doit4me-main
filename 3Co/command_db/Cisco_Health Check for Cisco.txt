@@ -1,0 +1,9 @@
+exit
+terminal length 0
+show environment
+show platform
+show redundancy
+show ip interface brief
+show version
+show route
+show log

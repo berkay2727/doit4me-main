@@ -1,0 +1,46 @@
+name: sonERsin
+
+topology:
+  nodes:
+    APE1-1:
+      kind: vr-sros
+      image: vrnetlab/vr-sros:20.10.R1
+      type: >-
+        cp: cpu=4 min_ram=8 chassis=sr-7 slot=A card=cpm5 ___
+        lc: cpu=4 min_ram=8 max_nics=6 chassis=sr-7 slot=1 card=iom4-e mda/1=me6-10gb-sfp+ ___
+      license: license-sros20.txt
+    APE1-2:
+      kind: vr-sros
+      image: vrnetlab/vr-sros:20.10.R1
+      type: >-
+        cp: cpu=4 min_ram=8 chassis=sr-7 slot=A card=cpm5 ___
+        lc: cpu=4 min_ram=8 max_nics=6 chassis=sr-7 slot=1 card=iom4-e mda/1=me6-10gb-sfp+ ___
+      license: license-sros20.txt
+    AGG2-1:
+      kind: vr-sros
+      image: vrnetlab/vr-sros:20.10.R1
+      type: "cpu=4 ram=8 slot=A chassis=ixr-r6 card=cpiom-ixr-r6 mda/1=m6-10g-sfp++4-25g-sfp28" 
+      license: license-sros20.txt
+    AGG2-2:
+      kind: vr-sros
+      image: vrnetlab/vr-sros:20.10.R1
+      type: "cpu=4 ram=8 slot=A chassis=ixr-r6 card=cpiom-ixr-r6 mda/1=m6-10g-sfp++4-25g-sfp28" 
+      license: license-sros20.txt
+    ACC3-1:
+      kind: vr-sros
+      image: vrnetlab/vr-sros:20.10.R1
+      type: sr-1s
+      license: license-sros20.txt
+    ACC3-2:
+      kind: vr-sros
+      image: vrnetlab/vr-sros:20.10.R1
+      type: sr-1s
+      license: license-sros20.txt
+  links:
+    - endpoints: ["ACC3-1:eth1", "AGG2-1:eth1"]
+    - endpoints: ["ACC3-1:eth2", "ACC3-2:eth1"]
+    - endpoints: ["ACC3-2:eth2", "AGG2-2:eth1"]
+    - endpoints: ["AGG2-1:eth2", "APE1-1:eth1"]
+    - endpoints: ["AGG2-1:eth3", "AGG2-2:eth2"]
+    - endpoints: ["AGG2-2:eth3", "APE1-2:eth1"]
+    - endpoints: ["APE1-1:eth2", "APE1-2:eth2"]
